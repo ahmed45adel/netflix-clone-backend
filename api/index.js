@@ -14,7 +14,7 @@ dotenv.config();
 const app = express();
 const corsConfig = {
   origin: `${process.env.CLIENT_URL}`, credentials: true, methods: ["GET", "POST", "PUT", "DELETE", "PATCH"]};
-app.options("*", cors(corsConfig)); // Pre-flight request for all routes
+app.options("/{*any}", cors(corsConfig)); // Pre-flight request for all routes
 app.use(cors(corsConfig));
 
 

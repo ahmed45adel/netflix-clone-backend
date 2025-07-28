@@ -12,7 +12,7 @@ import { protectRoute } from "./middleware/protectRoute.js";
 
 const app = express();
 
-const PORT = ENV_VARS.PORT;
+const PORT = process.env.PORT || ENV_VARS.PORT;
 
 app.use(express.json()); // will allow us to parse req.body
 app.use(cookieParser());

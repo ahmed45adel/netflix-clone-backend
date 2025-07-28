@@ -8,4 +8,5 @@ export const ENV_VARS = process.env.NODE_ENV === 'production' ? process.env : {
 	JWT_SECRET: process.env.JWT_SECRET,
 	NODE_ENV: process.env.NODE_ENV,
 	TMDB_API_KEY: process.env.TMDB_API_KEY,
+	CLIENT_URL: process.env.CLIENT_URL,
 };

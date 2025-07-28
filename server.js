@@ -16,6 +16,7 @@ const PORT = ENV_VARS.PORT;
 
 app.use(express.json()); // will allow us to parse req.body
 app.use(cookieParser());
+app.use(express.static("public")); // Serve static files from public directory
 
 app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/movie", protectRoute, movieRoutes);
